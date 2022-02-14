@@ -1,6 +1,6 @@
 import {
   createTasksAction,
-  deleteTasksAction,
+  deleteTaskAction,
   doTaskAction,
   loadTasksAction,
 } from "../redux/actions/actionsCreators";
@@ -26,7 +26,7 @@ describe("Given an actionCreators function", () => {
       const id = 1;
       const expectedAction = { type: actionTypes.deleteTask, id: 1 };
 
-      const action = deleteTasksAction(id);
+      const action = deleteTaskAction(id);
 
       expect(action).toEqual(expectedAction);
     });

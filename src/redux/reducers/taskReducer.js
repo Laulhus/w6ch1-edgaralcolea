@@ -1,8 +1,7 @@
-import actionTypes from "../actions/actionsTypes";
+import actionTypes from "../actions/actionTypes";
 
 const taskReducer = (tasks = [], action = {}) => {
   let newTasks;
-  debugger;
   switch (action.type) {
     case actionTypes.loadTasks:
       newTasks = [...action.tasks];

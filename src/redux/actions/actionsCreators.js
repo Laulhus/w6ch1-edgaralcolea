@@ -5,7 +5,7 @@ export const loadTasksAction = (tasks) => ({
   tasks,
 });
 
-export const deleteTasksAction = (id) => ({
+export const deleteTaskAction = (id) => ({
   type: actionTypes.deleteTask,
   id,
 });

@@ -21,5 +21,12 @@ describe("Given an App function", () => {
 
       expect(heading).toBeInTheDocument();
     });
+
+    test("Then it should render a Task component", async () => {
+      renderWithProviders(<App />);
+      const task = await screen.findAllByRole("listitem");
+
+      expect(task.length).toBe(2);
+    });
   });
 });
