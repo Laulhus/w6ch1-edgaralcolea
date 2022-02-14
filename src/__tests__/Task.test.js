@@ -1,12 +1,18 @@
-import { render, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Task from "../components/Task/Task";
+import renderWithProviders from "../setupTests";
 
 describe("Given a Task function", () => {
   describe("When rendered", () => {
-    test("Then it should display a li element", () => {
-      render(<Task />);
+    test("Then it should display a li element", async () => {
+      const task = { name: "test", done: "false" };
 
-      const element = screen.getByRole("listitem");
+      renderWithProviders(<Task task={task} />);
+
+      const element = await screen.findByRole("listitem");
+
+      expect(element).toHaveClass("list-item");
     });
   });
 });
