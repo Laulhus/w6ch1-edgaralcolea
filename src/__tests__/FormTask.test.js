@@ -7,6 +7,8 @@ describe("Given a FormTask function", () => {
       render(<FormTask />);
 
       const element = screen.getByRole("button");
+
+      expect(element).toBeInTheDocument();
     });
   });
 });

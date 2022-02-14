@@ -1,6 +1,5 @@
 import { screen } from "@testing-library/react";
 import App from "../App";
-import Task from "../components/Task/Task";
 import renderWithProviders from "../setupTests";
 
 describe("Given an App function", () => {
