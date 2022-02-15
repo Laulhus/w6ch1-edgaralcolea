@@ -11,9 +11,8 @@ export const deleteTaskThunk = (id) => async (dispatch) => {
   debugger;
   const response = await fetch(`${process.env.REACT_APP_API_URL}${id}`, {
     method: "DELETE",
-    headers: {
-      "Content-type": "application/json",
-    },
   });
-  dispatch(deleteTaskAction());
+  if (response.ok) {
+    dispatch(deleteTaskAction(id));
+  }
 };

@@ -18,6 +18,10 @@ body {
   align-items: flex-start;
   padding-left: 0px;
 }
+.list {
+  display: flex;
+  align-items: center;
+}
 .list-item {
   padding: 5px;
   cursor: pointer;
