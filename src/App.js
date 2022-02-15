@@ -2,14 +2,14 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import FormTask from "./components/FormTask/FormTask";
 import Task from "./components/Task/Task";
-import loadThunk from "./redux/thunks/loadThunk";
+import { loadTaskThunk } from "./redux/thunks/taskThunks";
 
 function App() {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.tasks);
 
   useEffect(() => {
-    loadThunk(dispatch);
+    loadTaskThunk(dispatch);
   }, [dispatch]);
 
   return (

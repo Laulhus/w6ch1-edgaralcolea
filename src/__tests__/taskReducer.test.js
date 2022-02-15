@@ -1,4 +1,7 @@
-import { loadTasksAction } from "../redux/actions/actionsCreators";
+import {
+  deleteTaskAction,
+  loadTasksAction,
+} from "../redux/actions/actionsCreators";
 import taskReducer from "../redux/reducers/taskReducer";
 
 describe("Given a taskReducer function", () => {
@@ -35,6 +38,20 @@ describe("Given a taskReducer function", () => {
       const tasks = [];
 
       const newTasks = taskReducer();
+
+      expect(newTasks).toEqual(tasks);
+    });
+  });
+
+  describe("When receives a deleteTaskAction with an id 1", () => {
+    test("Then it should return an array with the second task", () => {
+      const tasks = [
+        { id: 1, name: "Comprar", done: false },
+        { id: 2, name: "Lavar ropa", done: false },
+      ];
+      const id = 1;
+      const action = deleteTaskAction(id);
+      const newTasks = taskReducer(tasks, action);
 
       expect(newTasks).toEqual(tasks);
     });
