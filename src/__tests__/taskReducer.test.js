@@ -51,6 +51,7 @@ describe("Given a taskReducer function", () => {
       ];
       const id = 1;
       const action = deleteTaskAction(id);
+
       const newTasks = taskReducer(tasks, action);
 
       expect(newTasks).toEqual(tasks);

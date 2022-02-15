@@ -47,7 +47,7 @@ describe("Given an actionCreators function", () => {
     test('Then it should return an action with type "do-tasks" and the id 4', () => {
       const id = 4;
 
-      const expectedAction = { type: actionTypes.createTask, id };
+      const expectedAction = { type: actionTypes.doTask, id };
 
       const action = doTaskAction(id);
 

@@ -7,6 +7,7 @@ const taskReducer = (tasks = [], action = {}) => {
       newTasks = [...action.tasks];
       break;
     case actionTypes.deleteTask:
+      debugger;
       newTasks = tasks.filter((task) => task.id !== action.id);
     default:
       newTasks = [...tasks];

@@ -26,3 +26,15 @@ body {
 .done {
   text-decoration: line-through;
 }
+.delete {
+  text-decoration: none;
+  background-color: #c31f1f;
+  padding: 5px 10px;
+  color: #fff;
+  margin: 20px;
+  font-size: 15px;
+}
+.delete:hover {
+  background-color: #ff0000;
+  font-weight: 500;
+}

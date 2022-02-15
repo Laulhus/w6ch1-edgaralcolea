@@ -16,6 +16,6 @@ export const createTasksAction = (task) => ({
 });
 
 export const doTaskAction = (id) => ({
-  type: actionTypes.createTask,
+  type: actionTypes.doTask,
   id,
 });
