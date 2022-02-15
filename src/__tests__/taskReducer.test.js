@@ -49,12 +49,13 @@ describe("Given a taskReducer function", () => {
         { id: 1, name: "Comprar", done: false },
         { id: 2, name: "Lavar ropa", done: false },
       ];
+      const expectedTasks = [{ id: 2, name: "Lavar ropa", done: false }];
       const id = 1;
       const action = deleteTaskAction(id);
 
       const newTasks = taskReducer(tasks, action);
 
-      expect(newTasks).toEqual(tasks);
+      expect(newTasks).toEqual(expectedTasks);
     });
   });
 });
