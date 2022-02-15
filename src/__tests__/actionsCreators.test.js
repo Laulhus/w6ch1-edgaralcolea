@@ -4,7 +4,7 @@ import {
   doTaskAction,
   loadTasksAction,
 } from "../redux/actions/actionsCreators";
-import actionTypes from "../redux/actions/actionsTypes";
+import actionTypes from "../redux/actions/actionTypes";
 
 describe("Given an actionCreators function", () => {
   describe("When calling loadTasksAction with an array of two tasks", () => {

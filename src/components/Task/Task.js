@@ -1,7 +1,7 @@
-const Task = ({ task }) => {
+const Task = ({ task: { name, done } }) => {
   return (
     <>
-      <li className={`list-item ${task.done ? "done" : ""}`}>{task.name}</li>
+      <li className={`list-item ${done ? "" : "done"}`}>{name}</li>
       <a className="delete" href="delete">
         X
       </a>
